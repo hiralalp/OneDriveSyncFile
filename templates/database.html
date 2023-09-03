@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OneDrive Information</title>
+</head>
+<body>
+    <h1>Sync Files in OneDrive</h1>
+ 
+    <table border="1">
+        <tr>
+            {% for column in df.columns %}
+                <th>{{ column }}</th>
+            {% endfor %}
+        </tr>
+        {% for index, row in df.iterrows() %}
+            <tr>
+                {% for column in df.columns %}
+                    <td>{{ row[column] }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+ 
+    <a href="/">Upload Another File</a>
+</body>
+</html>
